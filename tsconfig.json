@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    // Vite 使用の Storybook にてエラーが出たので target 変更
+    // https://github.com/evanw/esbuild/issues/1355
+    "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
