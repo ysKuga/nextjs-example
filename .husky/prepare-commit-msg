@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+ROOT_DIR=$(pwd)
+readonly COMMIT_MSG_FILE="$ROOT_DIR/$1"
+readonly COMMIT_SOURCE=$2
+
+# プロジェクト用フック
+sh ./scripts/prepare-commit-msg.sh $COMMIT_MSG_FILE $COMMIT_SOURCE
